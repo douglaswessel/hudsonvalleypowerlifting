@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training & Coaching - Hudson Valley Powerlifting</title>
+    <meta name="description" content="Powerlifting coaching in the Hudson Valley. Beginner technique sessions to competition prep. In-person and remote programming available.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="canonical" href="https://hvpowerlifting.com/training.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Training & Coaching - Hudson Valley Powerlifting">
+    <meta property="og:description" content="Powerlifting coaching in the Hudson Valley. Beginner technique sessions to competition prep. In-person and remote programming available.">
+    <meta property="og:url" content="https://hvpowerlifting.com/training.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://hvpowerlifting.com/images/HVPL%20Logo%20SEO.png">
+    <meta property="og:site_name" content="Hudson Valley Powerlifting">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Training & Coaching - Hudson Valley Powerlifting">
+    <meta name="twitter:description" content="Powerlifting coaching in the Hudson Valley. Beginner technique sessions to competition prep. In-person and remote programming available.">
+    <meta name="twitter:image" content="https://hvpowerlifting.com/images/HVPL%20Logo%20SEO.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-y: scroll;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            color: #ffffff;
+            background: #000000;
+            line-height: 1.6;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-secondary {
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .logo-secondary .period {
+            color: #dc2626;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #dc2626;
+        }
+
+        .cta-nav {
+            background: #dc2626;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .cta-nav:hover {
+            background: #b91c1c;
+        }
+
+        .shop-cart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s;
+            margin-left: 20px;
+        }
+
+        .shop-cart:hover {
+            background: #dc2626;
+            transform: translateY(-2px);
+        }
+
+        .shop-cart svg {
+            stroke: #ffffff;
+        }
+
+
+
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #ffffff;
+            transition: all 0.3s;
+            border-radius: 2px;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .page-hero {
+            margin-top: 100px;
+            padding: 50px 40px 40px;
+            text-align: center;
+            background: linear-gradient(180deg, #0a0a0a 0%, #000000 100%);
+        }
+
+        .page-hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .page-hero p {
+            font-size: 20px;
+            color: #a3a3a3;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 40px;
+        }
+
+        .intro-text {
+            text-align: center;
+            font-size: 18px;
+            color: #e5e5e5;
+            max-width: 900px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
+        }
+
+        .service-card {
+            background: #0a0a0a;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: rgba(220, 38, 38, 0.5);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 350px;
+        }
+
+        .service-content {
+            padding: 35px;
+        }
+
+        .service-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .service-card h2 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .price-tag {
+            background: #dc2626;
+            color: #ffffff;
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .service-description {
+            font-size: 17px;
+            color: #e5e5e5;
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 28px;
+        }
+
+        .service-features li {
+            padding: 10px 0;
+            font-size: 15px;
+            color: #a3a3a3;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .service-features li::before {
+            content: "→";
+            color: #dc2626;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #dc2626;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #b91c1c;
+        }
+
+        .coaching-options {
+            background: #0a0a0a;
+            border-radius: 12px;
+            padding: 45px;
+            margin-top: 50px;
+        }
+
+        .coaching-options h2 {
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 18px;
+            letter-spacing: -1px;
+        }
+
+        .coaching-subtitle {
+            text-align: center;
+            font-size: 17px;
+            color: #a3a3a3;
+            margin-bottom: 45px;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
+        }
+
+        .option-card {
+            background: #000000;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 35px;
+        }
+
+        .option-card h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 14px;
+            letter-spacing: -0.5px;
+        }
+
+        .option-card p {
+            font-size: 15px;
+            color: #a3a3a3;
+            line-height: 1.7;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 50px 40px;
+            background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+            margin-top: 50px;
+        }
+
+        .cta-section h2 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            color: #a3a3a3;
+            margin-bottom: 35px;
+        }
+
+        footer {
+            background: #0a0a0a;
+            padding: 50px 40px 35px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background: #dc2626;
+        }
+
+        .copyright {
+            width: 100%;
+            text-align: center;
+            padding-top: 35px;
+            margin-top: 35px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #737373;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 38px;
+            }
+
+            .service-header {
+                flex-direction: column;
+            }
+
+            .service-card h2 {
+                font-size: 26px;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 100px;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.98);
+                flex-direction: column;
+                padding: 40px;
+                gap: 30px;
+                transform: translateX(-100%);
+                transition: transform 0.3s;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+
+            .cta-nav {
+                display: block;
+                text-align: center;
+            }
+
+            .shop-cart {
+                display: none;
+            }
+
+            .shop-cart {
+                display: none;
+            }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-secondary">HVPL<span class="period">.</span></a>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="members.html">Memberships & Passes</a></li>
+                <li><a href="training.html">Training</a></li>
+                <li><a href="equipment.html">Equipment</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://hvpowerlifting.printful.me/" target="_blank">Shop</a></li>
+                <li><a href="https://hvpl.gymmasteronline.com/portal/casual_form" class="cta-nav">Check Us Out</a></li>
+            </ul>
+            <a href="https://hvpowerlifting.printful.me/" target="_blank" class="shop-cart" aria-label="Shop">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"/>
+                    <circle cx="20" cy="21" r="1"/>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                </svg>
+            </a>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <h1>Training & Coaching</h1>
+        <p>From technique foundations to competition prep</p>
+    </section>
+
+    <section class="content-section">
+        <p class="intro-text">
+            Whether you're stepping into a gym for the first time or preparing for your next meet,
+            we offer coaching services designed to meet you where you are and take you where you want to go.
+            Serving lifters from Highland, Poughkeepsie, Newburgh, New Paltz, Kingston, and throughout the Mid-Hudson Valley.
+        </p>
+
+        <div class="service-card">
+            <div class="service-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&h=400&fit=crop'); background-size: cover; background-position: center;"></div>
+            <div class="service-content">
+                <div class="service-header">
+                    <h2>Technique Tune-Up</h2>
+                    <div class="price-tag">$100/session</div>
+                </div>
+                <p class="service-description">
+                    A 90-minute individual session focused on building the foundation of your squat, bench press, 
+                    and deadlift. Perfect for lifters who want to move better and lift safer.
+                </p>
+                <ul class="service-features">
+                    <li>Individual coaching with experienced powerlifter</li>
+                    <li>Video analysis of all three competition lifts</li>
+                    <li>Work up to challenging but safe weights</li>
+                    <li>Personalized cues and technical corrections</li>
+                    <li>Written follow-up with key points to practice</li>
+                </ul>
+                <a href="https://hvpl.gymmasteronline.com/portal/casual_form" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&h=400&fit=crop'); background-size: cover; background-position: center;"></div>
+            <div class="service-content">
+                <div class="service-header">
+                    <h2>Personal Training</h2>
+                    <div class="price-tag">Custom Pricing</div>
+                </div>
+                <p class="service-description">
+                    One-on-one training for general strength and conditioning goals. Whether you're looking to 
+                    build muscle, lose weight, improve athleticism, or develop well-rounded fitness, we'll 
+                    connect you with the right trainer.
+                </p>
+                <ul class="service-features">
+                    <li>Customized program design based on your goals</li>
+                    <li>Nutrition guidance and accountability</li>
+                    <li>Form coaching across all movement patterns</li>
+                    <li>Progress tracking and program adjustments</li>
+                    <li>Flexible scheduling options</li>
+                </ul>
+                <a href="https://hvpl.gymmasteronline.com/portal/casual_form" class="btn btn-primary">Free Consultation</a>
+            </div>
+        </div>
+
+        <div class="coaching-options">
+            <h2>Programming & Coaching</h2>
+            <p class="coaching-subtitle">Available for both in-person and remote lifters</p>
+            
+            <div class="options-grid">
+                <div class="option-card">
+                    <h3>Individualized Coaching</h3>
+                    <p>
+                        A fully customized training plan built around your goals, experience, schedule, 
+                        and equipment access. Includes regular check-ins, form reviews, and ongoing 
+                        program adjustments. For lifters serious about long-term progress.
+                    </p>
+                </div>
+                <div class="option-card">
+                    <h3>Group Programming</h3>
+                    <p>
+                        Follow structured powerlifting programming written by experienced coaches. 
+                        Perfect for self-motivated lifters who want proven training structure without 
+                        the cost of individual coaching. Includes access to private programming group.
+                    </p>
+                </div>
+                <div class="option-card">
+                    <h3>Competition Prep</h3>
+                    <p>
+                        Specialized programming for lifters preparing for a meet. Includes peaking protocol, 
+                        attempt selection strategy, meet-day handling, and post-meet deload planning. 
+                        Available 12-16 weeks out from competition.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to Get Started?</h2>
+        <p>Book a free consultation to discuss your goals and find the right coaching option.</p>
+        <a href="https://hvpl.gymmasteronline.com/portal/casual_form" class="btn btn-primary">Schedule Free Consultation</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo-secondary">HVPL<span class="period">.</span></div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61563850394669" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/hudsonvalleypowerlifting/" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="copyright">
+                © 2026 Hudson Valley Powerlifting. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script>
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

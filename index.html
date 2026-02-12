@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hudson Valley Powerlifting - 24/7 Gym in Highland, NY</title>
+    <meta name="description" content="24/7 powerlifting gym in Highland, NY with USAPL competition equipment, calibrated plates, expert coaching, and a tight-knit community of serious lifters.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="canonical" href="https://hvpowerlifting.com/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Hudson Valley Powerlifting - 24/7 Gym in Highland, NY">
+    <meta property="og:description" content="24/7 powerlifting gym in Highland, NY with USAPL competition equipment, calibrated plates, expert coaching, and a tight-knit community of serious lifters.">
+    <meta property="og:url" content="https://hvpowerlifting.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://hvpowerlifting.com/images/HVPL%20Logo%20SEO.png">
+    <meta property="og:site_name" content="Hudson Valley Powerlifting">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hudson Valley Powerlifting - 24/7 Gym in Highland, NY">
+    <meta name="twitter:description" content="24/7 powerlifting gym in Highland, NY with USAPL competition equipment, calibrated plates, expert coaching, and a tight-knit community of serious lifters.">
+    <meta name="twitter:image" content="https://hvpowerlifting.com/images/HVPL%20Logo%20SEO.png">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": ["SportsActivityLocation", "ExerciseGym"],
+        "name": "Hudson Valley Powerlifting",
+        "alternateName": "HVPL",
+        "url": "https://hvpowerlifting.com",
+        "logo": "https://hvpowerlifting.com/images/HVPL%20Logo%20SEO.png",
+        "image": "https://hvpowerlifting.com/images/HVPL%20Logo%20SEO.png",
+        "description": "24/7 powerlifting gym in Highland, NY with USAPL competition equipment, calibrated plates, expert coaching, and a tight-knit community of serious lifters.",
+        "telephone": "(845) 834-2408",
+        "email": "hudsonvalleypowerlifting@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "155 Vineyard Ave",
+            "addressLocality": "Highland",
+            "addressRegion": "NY",
+            "postalCode": "12528",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 41.7212,
+            "longitude": -73.9601
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
+        },
+        "priceRange": "$",
+        "amenityFeature": [
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "24/7 Access"
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "USAPL Competition Equipment"
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Personal Training"
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Calibrated Plates"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "3",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "sameAs": [
+            "https://www.instagram.com/hudsonvalleypowerlifting/",
+            "https://www.facebook.com/profile.php?id=61563850394669"
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-y: scroll;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            color: #ffffff;
+            background: #000000;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 60px;
+        }
+
+        .logo-secondary {
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: #ffffff;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .logo-secondary:hover {
+            opacity: 0.8;
+        }
+
+        .logo-secondary .period {
+            color: #dc2626;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #dc2626;
+        }
+
+        .cta-nav {
+            background: #dc2626;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .cta-nav:hover {
+            background: #b91c1c;
+            color: #ffffff;
+        }
+
+        .shop-cart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s;
+            margin-left: 20px;
+        }
+
+        .shop-cart:hover {
+            background: #dc2626;
+            transform: translateY(-2px);
+        }
+
+        .shop-cart svg {
+            stroke: #ffffff;
+        }
+
+
+
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #ffffff;
+            transition: all 0.3s;
+            border-radius: 2px;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 75vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            margin-top: 100px;
+            overflow: hidden;
+        }
+
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            z-index: 0;
+        }
+
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7));
+            z-index: 1;
+        }
+
+        .hero-background.active {
+            opacity: 1;
+        }
+
+        .hero-background:nth-child(1) {
+            background-image: url('images/main-gym-photo.jpg');
+        }
+
+        .hero-background:nth-child(2) {
+            background-image: url('images/main-gym-photo2.jpg');
+        }
+
+        .hero-background:nth-child(3) {
+            background-image: url('images/main-gym-photo3.jpg');
+        }
+
+        .hero-background:nth-child(4) {
+            background-image: url('images/main-gym-photo4.jpg');
+        }
+
+        .hero-background:nth-child(5) {
+            background-image: url('images/main-gym-photo5.jpg');
+        }
+
+        .hero-content {
+            max-width: 900px;
+            padding: 0 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .hero-subhead {
+            font-size: 20px;
+            font-weight: 400;
+            color: #e5e5e5;
+            margin-bottom: 28px;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 18px 36px;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #dc2626;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #b91c1c;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
+
+        .btn-secondary:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+
+        /* Value Props Section */
+        .value-props {
+            padding: 50px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 40px;
+            letter-spacing: -1px;
+        }
+
+        .props-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .prop-card {
+            text-align: center;
+        }
+
+        .prop-icon {
+            font-size: 72px;
+            margin-bottom: 24px;
+        }
+
+        .prop-card h3 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .prop-card p {
+            font-size: 18px;
+            color: #a3a3a3;
+            line-height: 1.7;
+        }
+
+        /* Social Proof Section */
+        .social-proof {
+            background: #0a0a0a;
+            padding: 80px 40px;
+        }
+
+        .social-proof-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .stat-line {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 60px;
+            color: #dc2626;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .testimonial {
+            background: #000000;
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .testimonial-quote {
+            font-size: 18px;
+            font-style: italic;
+            color: #e5e5e5;
+            margin-bottom: 24px;
+            line-height: 1.8;
+        }
+
+        .testimonial-author {
+            font-size: 16px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        /* Quick Links Section */
+        .quick-links {
+            padding: 80px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .link-card {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><rect fill="%23111" width="400" height="300"/></svg>');
+            background-size: cover;
+            background-position: center;
+            height: 320px;
+            border-radius: 8px;
+            display: flex;
+            align-items: flex-end;
+            padding: 40px;
+            text-decoration: none;
+            color: #ffffff;
+            transition: transform 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .link-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .link-card h3 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        /* Footer */
+        footer {
+            background: #0a0a0a;
+            padding: 60px 40px 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .footer-logo {
+            height: 80px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background: #dc2626;
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            width: 100%;
+            text-align: center;
+            padding-top: 40px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #737373;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero {
+                margin-top: 80px;
+                padding: 60px 20px 40px;
+                min-height: auto;
+                height: auto;
+                display: block;
+            }
+
+            .hero-content {
+                padding: 0 20px;
+                position: relative;
+                z-index: 2;
+            }
+
+            .hero-content img {
+                margin-top: 20px;
+            }
+
+            .hero-cta {
+                margin-bottom: 20px;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .hero-subhead {
+                font-size: 16px;
+                margin-bottom: 24px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 100px;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.98);
+                flex-direction: column;
+                padding: 40px;
+                gap: 30px;
+                transform: translateX(-100%);
+                transition: transform 0.3s;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+
+            .cta-nav {
+                display: block;
+                text-align: center;
+            }
+
+            .shop-cart {
+                display: none;
+            }
+
+            .shop-cart {
+                display: none;
+            }
+
+            nav {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-secondary">HVPL<span class="period">.</span></a>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="members.html">Memberships & Passes</a></li>
+                <li><a href="training.html">Training</a></li>
+                <li><a href="equipment.html">Equipment</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://hvpowerlifting.printful.me/" target="_blank">Shop</a></li>
+                <li><a href="https://hvpl.gymmasteronline.com/portal/casual_form" class="cta-nav">Check Us Out</a></li>
+            </ul>
+            <a href="https://hvpowerlifting.printful.me/" target="_blank" class="shop-cart" aria-label="Shop">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"/>
+                    <circle cx="20" cy="21" r="1"/>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                </svg>
+            </a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-background active"></div>
+        <div class="hero-background"></div>
+        <div class="hero-background"></div>
+        <div class="hero-background"></div>
+        <div class="hero-background"></div>
+        <div class="hero-content">
+            <h1>Build Real Strength in the Hudson Valley</h1>
+            <p class="hero-subhead">The Hudson Valley's dedicated powerlifting gym, serving serious lifters from Highland, Poughkeepsie, Newburgh, New Paltz, Kingston, and surrounding areas.</p>
+            <div class="hero-cta">
+                <a href="https://hvpl.gymmasteronline.com/portal/casual_form" class="btn btn-primary">Check Us Out</a>
+                <a href="https://hvpl.gymmasteronline.com/portal/signup" class="btn btn-secondary">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="value-props">
+        <h2 class="section-title">Why Train With Us</h2>
+        <div class="props-grid">
+            <div class="prop-card">
+                <div class="prop-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6.5 6.5h-2v11h2"/>
+                        <path d="M17.5 6.5h2v11h-2"/>
+                        <line x1="6.5" y1="12" x2="17.5" y2="12"/>
+                        <rect x="4" y="8" width="2.5" height="8" rx="0.5"/>
+                        <rect x="17.5" y="8" width="2.5" height="8" rx="0.5"/>
+                        <rect x="2" y="9.5" width="2" height="5" rx="0.5"/>
+                        <rect x="20" y="9.5" width="2" height="5" rx="0.5"/>
+                    </svg>
+                </div>
+                <h3>Quality Equipment</h3>
+                <p>Powerlifting combo racks, calibrated competition plates, and premium gear built for serious training.</p>
+            </div>
+            <div class="prop-card">
+                <div class="prop-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <h3>Expert Coaching</h3>
+                <p>From beginner technique sessions to competition prep programming. In-person and remote options available.</p>
+            </div>
+            <div class="prop-card">
+                <div class="prop-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                </div>
+                <h3>24/7 Access</h3>
+                <p>Train on your schedule, every day of the year. No crowded hours, no waiting for equipment.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section" style="padding: 50px 40px; background: #0a0a0a;">
+        <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+            <div>
+                <h2 style="font-size: 32px; font-weight: 800; margin-bottom: 20px; letter-spacing: -1px;">About Hudson Valley Powerlifting</h2>
+                <p style="font-size: 16px; color: #a3a3a3; line-height: 1.8; margin-bottom: 16px;">
+                    Built by lifters, for lifters. After years of training in commercial gyms—waiting for equipment, dealing with restrictions, and lacking community—we created the gym we always wanted.
+                </p>
+                <p style="font-size: 16px; color: #a3a3a3; line-height: 1.8;">
+                    HVPL is the Hudson Valley's only dedicated powerlifting facility with competition-grade equipment. 24/7 access means you train on your schedule. Located in Highland, NY, we serve lifters across Ulster and Dutchess counties.
+                </p>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div style="background: #000; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 24px; text-align: center;">
+                    <div style="font-size: 36px; font-weight: 800; color: #dc2626; margin-bottom: 8px;">24/7</div>
+                    <div style="font-size: 14px; color: #a3a3a3; text-transform: uppercase; letter-spacing: 1px;">Access</div>
+                </div>
+                <div style="background: #000; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 24px; text-align: center;">
+                    <div style="font-size: 36px; font-weight: 800; color: #dc2626; margin-bottom: 8px;">Pro</div>
+                    <div style="font-size: 14px; color: #a3a3a3; text-transform: uppercase; letter-spacing: 1px;">Equipment</div>
+                </div>
+                <div style="background: #000; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 24px; text-align: center;">
+                    <div style="font-size: 36px; font-weight: 800; color: #dc2626; margin-bottom: 8px;">4</div>
+                    <div style="font-size: 14px; color: #a3a3a3; text-transform: uppercase; letter-spacing: 1px;">Combo Racks</div>
+                </div>
+                <div style="background: #000; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 24px; text-align: center;">
+                    <div style="font-size: 36px; font-weight: 800; color: #dc2626; margin-bottom: 8px;">All</div>
+                    <div style="font-size: 14px; color: #a3a3a3; text-transform: uppercase; letter-spacing: 1px;">Levels Welcome</div>
+                </div>
+            </div>
+        </div>
+        <style>
+            @media (max-width: 768px) {
+                .about-section > div { grid-template-columns: 1fr !important; }
+            }
+        </style>
+    </section>
+
+    <section class="social-proof">
+        <div class="social-proof-content">
+            <div class="stat-line">A Tight-Knit Community of Serious Lifters</div>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p class="testimonial-quote">"Top notch competition powerlifting equipment (identical to USAPL national level meets), quality coaching, 24/7 access... HIGHLY recommend you check out this gym!"</p>
+                    <p class="testimonial-author">— Joshua K.</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-quote">"I've been powerlifting competitively for over 10 years and frequented many different gyms. Hudson Valley Powerlifting is the gym I've always been hoping would open. The equipment and community are amazing!"</p>
+                    <p class="testimonial-author">— Winnie A.</p>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-quote">"Owners are always looking to update and bring in new equipment. 24/7 access makes it perfect for people with unpredictable schedules. Recommend if you're serious about strength training or powerlifting goals."</p>
+                    <p class="testimonial-author">— Morgan C.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-links">
+        <h2 class="section-title">Get Started</h2>
+        <div class="links-grid">
+            <a href="members.html" class="link-card">
+                <h3>Memberships & Passes</h3>
+            </a>
+            <a href="training.html" class="link-card">
+                <h3>Training & Coaching</h3>
+            </a>
+            <a href="equipment.html" class="link-card">
+                <h3>Equipment List</h3>
+            </a>
+            <a href="contact.html" class="link-card">
+                <h3>Visit & Contact</h3>
+            </a>
+        </div>
+    </section>
+
+    <section class="faq-section" style="padding: 80px 40px; background: #0a0a0a;">
+        <div style="max-width: 900px; margin: 0 auto;">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+
+            <div class="faq-item" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 28px 0;">
+                <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 14px; color: #ffffff;">What equipment does Hudson Valley Powerlifting have?</h3>
+                <p style="font-size: 16px; color: #a3a3a3; line-height: 1.7;">We have competition-grade powerlifting equipment identical to USAPL national meets, including Texas Strength Systems combo racks, calibrated competition plates from Texas Strength Systems and Rogue, competition benches, deadlift platforms, and a full range of specialty bars.</p>
+            </div>
+
+            <div class="faq-item" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 28px 0;">
+                <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 14px; color: #ffffff;">Is Hudson Valley Powerlifting open 24/7?</h3>
+                <p style="font-size: 16px; color: #a3a3a3; line-height: 1.7;">Yes. Members have 24/7 key fob access, 365 days a year. Train whenever fits your schedule—early morning, late night, or holidays.</p>
+            </div>
+
+            <div class="faq-item" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 28px 0;">
+                <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 14px; color: #ffffff;">Do you offer powerlifting coaching?</h3>
+                <p style="font-size: 16px; color: #a3a3a3; line-height: 1.7;">Yes. We offer coaching for all levels, from beginners learning squat, bench, and deadlift technique to experienced lifters preparing for competition. In-person and remote programming options available.</p>
+            </div>
+
+            <div class="faq-item" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 28px 0;">
+                <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 14px; color: #ffffff;">Where is HVPL located?</h3>
+                <p style="font-size: 16px; color: #a3a3a3; line-height: 1.7;">We're at 155 Vineyard Ave in Highland, NY—minutes from the Mid-Hudson Bridge, with easy access from Highland, Poughkeepsie, Newburgh, New Paltz, and Kingston. We serve lifters across Ulster and Dutchess counties throughout the Mid-Hudson Valley.</p>
+            </div>
+
+            <div class="faq-item" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 28px 0;">
+                <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 14px; color: #ffffff;">Can I try the gym before joining?</h3>
+                <p style="font-size: 16px; color: #a3a3a3; line-height: 1.7;">Absolutely. We offer day passes and drop-in options. Contact us to schedule a visit or just stop by.</p>
+            </div>
+
+            <div class="faq-item" style="border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 28px 0;">
+                <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 14px; color: #ffffff;">What's the difference between HVPL and a regular gym?</h3>
+                <p style="font-size: 16px; color: #a3a3a3; line-height: 1.7;">We're built specifically for powerlifting and serious strength training. No waiting for squat racks, no restrictions on chalk or deadlifts, competition-calibrated equipment, and a focused community of lifters who support each other.</p>
+            </div>
+
+            <div class="faq-item" style="padding: 28px 0;">
+                <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 14px; color: #ffffff;">Do I need to be experienced to join?</h3>
+                <p style="font-size: 16px; color: #a3a3a3; line-height: 1.7;">No. We welcome all levels. Many members started as beginners and learned proper technique here. Our coaching services are great for those new to powerlifting.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What equipment does Hudson Valley Powerlifting have?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We have competition-grade powerlifting equipment identical to USAPL national meets, including Texas Strength Systems combo racks, calibrated competition plates from Texas Strength Systems and Rogue, competition benches, deadlift platforms, and a full range of specialty bars."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Hudson Valley Powerlifting open 24/7?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Members have 24/7 key fob access, 365 days a year. Train whenever fits your schedule—early morning, late night, or holidays."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do you offer powerlifting coaching?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. We offer coaching for all levels, from beginners learning squat, bench, and deadlift technique to experienced lifters preparing for competition. In-person and remote programming options available."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Where is HVPL located?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We're at 155 Vineyard Ave in Highland, NY—minutes from the Mid-Hudson Bridge, with easy access from Highland, Poughkeepsie, Newburgh, New Paltz, and Kingston. We serve lifters across Ulster and Dutchess counties throughout the Mid-Hudson Valley."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I try the gym before joining?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely. We offer day passes and drop-in options. Contact us to schedule a visit or just stop by."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What's the difference between HVPL and a regular gym?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We're built specifically for powerlifting and serious strength training. No waiting for squat racks, no restrictions on chalk or deadlifts, competition-calibrated equipment, and a focused community of lifters who support each other."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do I need to be experienced to join?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. We welcome all levels. Many members started as beginners and learned proper technique here. Our coaching services are great for those new to powerlifting."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <section class="find-us-section" style="padding: 60px 40px; background: #000000;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="section-title">Find Us</h2>
+            <p style="text-align: center; color: #a3a3a3; font-size: 17px; margin-bottom: 30px; line-height: 1.7;">
+                155 Vineyard Ave, Highland, NY 12528<br>
+                Minutes from the Mid-Hudson Bridge • Serving the Mid-Hudson Valley
+            </p>
+            <div style="border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.847!2d-73.9757522!3d41.7140256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dd3d1c1453258d%3A0x6b3b569c4f84db11!2sHudson%20Valley%20Powerlifting!5e0!3m2!1sen!2sus!4v1704067200000!5m2!1sen!2sus"
+                    width="100%"
+                    height="350"
+                    style="border:0; display: block;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo-secondary">HVPL<span class="period">.</span></div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61563850394669" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/hudsonvalleypowerlifting/" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="copyright">
+                © 2026 Hudson Valley Powerlifting. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script>
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Hero background carousel
+        const heroBackgrounds = document.querySelectorAll('.hero-background');
+        let currentBackground = 0;
+
+        function switchBackground() {
+            heroBackgrounds[currentBackground].classList.remove('active');
+            currentBackground = (currentBackground + 1) % heroBackgrounds.length;
+            heroBackgrounds[currentBackground].classList.add('active');
+        }
+
+        // Switch background every 5 seconds
+        setInterval(switchBackground, 5000);
+    </script>
+</body>
+</html>

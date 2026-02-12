@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Hudson Valley Powerlifting</title>
+    <meta name="description" content="Visit Hudson Valley Powerlifting at 155 Vineyard Ave, Highland, NY. Contact us for membership info, drop-in visits, or coaching inquiries.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="canonical" href="https://hvpowerlifting.com/contact.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact - Hudson Valley Powerlifting">
+    <meta property="og:description" content="Visit Hudson Valley Powerlifting at 155 Vineyard Ave, Highland, NY. Contact us for membership info, drop-in visits, or coaching inquiries.">
+    <meta property="og:url" content="https://hvpowerlifting.com/contact.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://hvpowerlifting.com/images/HVPL%20Logo%20SEO.png">
+    <meta property="og:site_name" content="Hudson Valley Powerlifting">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact - Hudson Valley Powerlifting">
+    <meta name="twitter:description" content="Visit Hudson Valley Powerlifting at 155 Vineyard Ave, Highland, NY. Contact us for membership info, drop-in visits, or coaching inquiries.">
+    <meta name="twitter:image" content="https://hvpowerlifting.com/images/HVPL%20Logo%20SEO.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-y: scroll;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            color: #ffffff;
+            background: #000000;
+            line-height: 1.6;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-secondary {
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .logo-secondary .period {
+            color: #dc2626;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #dc2626;
+        }
+
+        .cta-nav {
+            background: #dc2626;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .cta-nav:hover {
+            background: #b91c1c;
+        }
+
+        .shop-cart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s;
+            margin-left: 20px;
+        }
+
+        .shop-cart:hover {
+            background: #dc2626;
+            transform: translateY(-2px);
+        }
+
+        .shop-cart svg {
+            stroke: #ffffff;
+        }
+
+
+
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #ffffff;
+            transition: all 0.3s;
+            border-radius: 2px;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .page-hero {
+            margin-top: 100px;
+            padding: 50px 40px 40px;
+            text-align: center;
+            background: linear-gradient(180deg, #0a0a0a 0%, #000000 100%);
+        }
+
+        .page-hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .page-hero p {
+            font-size: 20px;
+            color: #a3a3a3;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px 40px;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .contact-method {
+            background: #0a0a0a;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .contact-icon {
+            margin-bottom: 24px;
+        }
+
+        .contact-method h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 18px;
+            letter-spacing: -0.5px;
+        }
+
+        .contact-method a {
+            color: #e5e5e5;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s;
+            word-break: break-all;
+        }
+
+        .contact-method a:hover {
+            color: #dc2626;
+        }
+
+        .social-links-large {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .social-link-large {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 14px 24px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-link-large:hover {
+            background: rgba(220, 38, 38, 0.1);
+            border-color: #dc2626;
+            color: #ffffff;
+        }
+
+        .social-link-large:hover .icon svg {
+            stroke: #dc2626;
+        }
+
+        .social-link-large .icon svg {
+            stroke: #ffffff;
+        }
+
+        .location-card {
+            background: #0a0a0a;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        .location-card h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            text-align: center;
+            letter-spacing: -0.5px;
+        }
+
+        .address {
+            font-size: 18px;
+            color: #e5e5e5;
+            text-align: center;
+            margin-bottom: 28px;
+            line-height: 1.8;
+        }
+
+        .map-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .map-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: #e5e5e5;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .map-button:hover {
+            background: rgba(220, 38, 38, 0.1);
+            border-color: #dc2626;
+            color: #dc2626;
+        }
+
+        footer {
+            background: #0a0a0a;
+            padding: 50px 40px 35px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 70px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-icon svg {
+            stroke: #ffffff;
+        }
+
+        .social-icon:hover {
+            background: #dc2626;
+        }
+
+        .copyright {
+            width: 100%;
+            text-align: center;
+            padding-top: 35px;
+            margin-top: 35px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #737373;
+            font-size: 14px;
+        }
+
+        @media (max-width: 968px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-hero h1 {
+                font-size: 38px;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 100px;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.98);
+                flex-direction: column;
+                padding: 40px;
+                gap: 30px;
+                transform: translateX(-100%);
+                transition: transform 0.3s;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+
+            .cta-nav {
+                display: block;
+                text-align: center;
+            }
+
+            .shop-cart {
+                display: none;
+            }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-secondary">HVPL<span class="period">.</span></a>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="members.html">Memberships & Passes</a></li>
+                <li><a href="training.html">Training</a></li>
+                <li><a href="equipment.html">Equipment</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://hvpowerlifting.printful.me/" target="_blank">Shop</a></li>
+                <li><a href="https://hvpl.gymmasteronline.com/portal/casual_form" class="cta-nav">Check Us Out</a></li>
+            </ul>
+            <a href="https://hvpowerlifting.printful.me/" target="_blank" class="shop-cart" aria-label="Shop">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"/>
+                    <circle cx="20" cy="21" r="1"/>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                </svg>
+            </a>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <h1>Get In Touch</h1>
+        <p>We're here to answer questions and help you get started</p>
+    </section>
+
+    <section class="contact-section">
+        <div class="contact-grid">
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </div>
+                <h3>Email</h3>
+                <a href="mailto:hudsonvalleypowerlifting@gmail.com">hudsonvalleypowerlifting@gmail.com</a>
+            </div>
+
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </div>
+                <h3>Phone</h3>
+                <a href="tel:+18458342408">(845) 834-2408</a>
+            </div>
+
+            <div class="contact-method">
+                <div class="contact-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/>
+                        <line x1="12" y1="18" x2="12.01" y2="18"/>
+                    </svg>
+                </div>
+                <h3>Social Media</h3>
+                <div class="social-links-large">
+                    <a href="https://www.instagram.com/hudsonvalleypowerlifting/" class="social-link-large">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </div>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61563850394669" class="social-link-large">
+                        <div class="icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </div>
+                        <span>Facebook</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="location-card">
+            <h3>Visit Us</h3>
+            <div class="address">
+                155 Vineyard Ave<br>
+                Highland, NY 12528
+            </div>
+            <p style="color: #a3a3a3; text-align: center; margin-bottom: 28px; font-size: 15px; line-height: 1.7;">
+                Located in Highland, NY—just minutes from the Mid-Hudson Bridge.<br>
+                Easy access from Highland, Poughkeepsie, New Paltz, Newburgh, and Kingston.<br>
+                Serving powerlifters across Ulster and Dutchess counties.
+            </p>
+            <div class="map-container" style="margin-bottom: 28px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.847!2d-73.9757522!3d41.7140256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89dd3d1c1453258d%3A0x6b3b569c4f84db11!2sHudson%20Valley%20Powerlifting!5e0!3m2!1sen!2sus!4v1704067200000!5m2!1sen!2sus"
+                    width="100%"
+                    height="300"
+                    style="border:0; display: block;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div class="map-buttons">
+                <a href="https://www.google.com/maps/place/Hudson+Valley+Powerlifting/@41.7140256,-73.9757522,17z/data=!3m1!4b1!4m6!3m5!1s0x89dd3d1c1453258d:0x6b3b569c4f84db11!8m2!3d41.7140256!4d-73.9731773!16s%2Fg%2F11y918qdmr?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="map-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    Open in Google Maps
+                </a>
+                <a href="https://maps.apple.com/place?place-id=I69748B4ED88BEC0E&address=155+Vineyard+Ave%2C+Highland%2C+NY++12528%2C+United+States&coordinate=41.7141364%2C-73.973194&name=Hudson+Valley+Powerlifting&_provider=9902" target="_blank" class="map-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    Open in Apple Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo-secondary">HVPL<span class="period">.</span></div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61563850394669" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/hudsonvalleypowerlifting/" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="copyright">
+                © 2026 Hudson Valley Powerlifting. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
