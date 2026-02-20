@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="2000" height="600">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&amp;display=swap');
+      .logo-text {
+        font-family: 'Inter', -apple-system, system-ui, sans-serif;
+        font-size: 100px;
+        font-weight: 800;
+        letter-spacing: -3px;
+        fill: #000000;
+      }
+      .period {
+        fill: #dc2626;
+      }
+    </style>
+  </defs>
+  <rect width="400" height="120" fill="#ffffff"/>
+  <text x="20" y="90" class="logo-text">HVPL<tspan class="period">.</tspan></text>
+</svg>
