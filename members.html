@@ -234,6 +234,20 @@
             letter-spacing: 1px;
         }
 
+        .badge-value {
+            background: #0a0a0a;
+            border: 2px solid #dc2626;
+            color: #dc2626;
+            padding: 4px 18px;
+        }
+
+        /* A lone card on the final row sits centered at column width */
+        .pricing-grid > .pricing-card:last-child:nth-child(odd) {
+            grid-column: 1 / -1;
+            width: calc(50% - 17.5px);
+            justify-self: center;
+        }
+
         .pricing-card h3 {
             font-size: 28px;
             font-weight: 700;
@@ -405,6 +419,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .pricing-grid > .pricing-card:last-child:nth-child(odd) {
+                width: auto;
+            }
+
             .mobile-menu-toggle {
                 display: flex;
             }
@@ -521,6 +539,20 @@
                     <li>Best value for regular training</li>
                 </ul>
                 <a href="https://hvpl.gymmasteronline.com/portal/signup/details/048059ff82fcf46e0cadc745f0320c23?companyid=2" class="btn btn-primary">Buy Unlimited Pass</a>
+            </div>
+
+            <div class="pricing-card">
+                <span class="featured-badge badge-value">Best Value</span>
+                <h3>Annual Unlimited</h3>
+                <div class="price">$840<span class="price-period">/yr</span></div>
+                <ul class="features-list">
+                    <li>Just $70/mo, billed yearly</li>
+                    <li>Save $180 vs monthly</li>
+                    <li>Unlimited 24/7 access</li>
+                    <li>Full facility access</li>
+                    <li>Rate locked for 12 months</li>
+                </ul>
+                <a href="https://hvpl.gymmasteronline.com/portal/signup/details/2fe4703a0aaddcb82e2b24850b6d2c73?companyid=2" class="btn btn-secondary">Buy Annual Pass</a>
             </div>
 
             <div class="pricing-card">
