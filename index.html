@@ -152,7 +152,7 @@
 
         .nav-links {
             display: flex;
-            gap: 40px;
+            gap: 26px;
             list-style: none;
         }
 
@@ -160,7 +160,7 @@
             color: #ffffff;
             text-decoration: none;
             font-weight: 600;
-            font-size: 15px;
+            font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             transition: color 0.3s;
@@ -642,6 +642,7 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="members.html">Memberships & Passes</a></li>
+                <li><a href="events.html">Events</a></li>
                 <li><a href="training.html">Training</a></li>
                 <li><a href="equipment.html">Equipment</a></li>
                 <li><a href="team.html">Team</a></li>
@@ -673,6 +674,24 @@
                 <a href="https://hvpl.gymmasteronline.com/portal/signup" class="btn btn-secondary">Get Started</a>
             </div>
         </div>
+    </section>
+
+    <section class="event-promo" style="background: linear-gradient(135deg, #1a0000 0%, #0a0a0a 100%); border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 36px 40px;">
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap;">
+            <div>
+                <div style="display: inline-block; background: #dc2626; color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;">Now Enrolling</div>
+                <h2 style="font-size: 28px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 8px;">SBD Foundations: Squat, Bench &amp; Deadlift</h2>
+                <p style="font-size: 16px; color: #a3a3a3;">Three hands-on sessions &mdash; Thursdays 6:30&ndash;7:30 PM, Aug 27 / Sep 3 / Sep 10. $50 per session or $125 for all three. All levels, 16+.</p>
+            </div>
+            <a href="event-sbd-foundations.html" class="btn btn-primary" style="white-space: nowrap;">Register Now</a>
+        </div>
+        <style>
+            @media (max-width: 768px) {
+                .event-promo h2 { font-size: 22px !important; }
+                .event-promo > div { flex-direction: column; align-items: flex-start !important; }
+                .event-promo .btn { width: 100%; text-align: center; }
+            }
+        </style>
     </section>
 
     <section class="value-props">
@@ -778,6 +797,9 @@
     <section class="quick-links">
         <h2 class="section-title">Get Started</h2>
         <div class="links-grid">
+            <a href="events.html" class="link-card">
+                <h3>Workshops &amp; Events</h3>
+            </a>
             <a href="members.html" class="link-card">
                 <h3>Memberships & Passes</h3>
             </a>

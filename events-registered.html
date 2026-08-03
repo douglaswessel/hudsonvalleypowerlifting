@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Received - SBD Foundations | Hudson Valley Powerlifting</title>
+    <meta name="description" content="Your SBD Foundations workshop registration was received. Next step: send payment to lock your spot.">
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-y: scroll;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            color: #ffffff;
+            background: #000000;
+            line-height: 1.6;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-secondary {
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .logo-secondary .period {
+            color: #dc2626;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 26px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #dc2626;
+        }
+
+        .cta-nav {
+            background: #dc2626;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .cta-nav:hover {
+            background: #b91c1c;
+            color: #ffffff;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #ffffff;
+            transition: all 0.3s;
+            border-radius: 2px;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .wrap {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 150px 40px 40px;
+        }
+
+        .panel {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0000 100%);
+            border: 2px solid #dc2626;
+            border-radius: 12px;
+            padding: 44px;
+            text-align: center;
+        }
+
+        .panel .check {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: rgba(220, 38, 38, 0.15);
+            border: 2px solid #dc2626;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 22px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 14px;
+            letter-spacing: -1px;
+        }
+
+        .lede {
+            font-size: 17px;
+            color: #e5e5e5;
+            margin-bottom: 30px;
+        }
+
+        .amounts {
+            background: #000000;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            padding: 24px;
+            text-align: left;
+            margin-bottom: 28px;
+        }
+
+        .amounts h2 {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #dc2626;
+            margin-bottom: 16px;
+        }
+
+        .amounts .row {
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 11px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+            font-size: 15px;
+        }
+
+        .amounts .row:last-child {
+            border-bottom: none;
+        }
+
+        .amounts .row .k {
+            color: #a3a3a3;
+        }
+
+        .amounts .row .v {
+            font-weight: 800;
+            color: #dc2626;
+            font-size: 19px;
+        }
+
+        .venmo-note {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px dashed rgba(255, 255, 255, 0.25);
+            border-radius: 8px;
+            padding: 20px;
+            font-size: 15px;
+            color: #e5e5e5;
+            line-height: 1.75;
+            text-align: left;
+            margin-bottom: 28px;
+        }
+
+        .venmo-note strong {
+            color: #ffffff;
+        }
+
+        .venmo-note a {
+            color: #dc2626;
+            font-weight: 600;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            transition: all 0.3s;
+            background: #dc2626;
+            color: #ffffff;
+        }
+
+        .btn:hover {
+            background: #b91c1c;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-outline:hover {
+            background: transparent;
+            border-color: #dc2626;
+            color: #dc2626;
+        }
+
+        .btn-row {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .fine {
+            font-size: 13px;
+            color: #737373;
+            margin-top: 26px;
+            line-height: 1.75;
+        }
+
+        .fine a {
+            color: #dc2626;
+        }
+
+        footer {
+            background: #0a0a0a;
+            padding: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 60px;
+            text-align: center;
+            color: #737373;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .wrap {
+                padding: 130px 20px 30px;
+            }
+
+            .panel {
+                padding: 30px 22px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 100px;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.98);
+                flex-direction: column;
+                padding: 40px;
+                gap: 30px;
+                transform: translateX(-100%);
+                transition: transform 0.3s;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                z-index: 1000;
+                max-height: calc(100vh - 100px);
+                overflow-y: auto;
+            }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+
+            .cta-nav {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-secondary">HVPL<span class="period">.</span></a>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="members.html">Memberships & Passes</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="training.html">Training</a></li>
+                <li><a href="equipment.html">Equipment</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://hvpowerlifting.printful.me/" target="_blank">Shop</a></li>
+                <li><a href="https://hvpl.gymmasteronline.com/portal/casual_form" class="cta-nav">Check Us Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="wrap">
+        <div class="panel">
+            <div class="check">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"/>
+                </svg>
+            </div>
+            <h1>Registration received</h1>
+            <p class="lede">
+                Thanks for signing up for <strong>SBD Foundations: Squat, Bench &amp; Deadlift</strong>.
+                One step left &mdash; send payment to lock your spot.
+            </p>
+
+            <div class="amounts">
+                <h2>What you owe</h2>
+                <div class="row"><span class="k">One session</span><span class="v">$50</span></div>
+                <div class="row"><span class="k">Two sessions</span><span class="v">$100</span></div>
+                <div class="row"><span class="k">All three sessions</span><span class="v">$125</span></div>
+            </div>
+
+            <div class="venmo-note">
+                <strong>Send payment on Venmo to @Heather-Monkey.</strong><br>
+                Use the amount above for the sessions you picked, and put
+                <em>SBD Foundations &mdash; Your Name</em> in the note so we can match it. We'll confirm your spot
+                by text or email once it lands. Questions? Text <a href="sms:+18555963810">(855) 596-3810</a>.
+            </div>
+
+            <div class="btn-row">
+                <a href="https://venmo.com/u/Heather-Monkey" class="btn" target="_blank" rel="noopener">Pay with Venmo</a>
+                <a href="event-sbd-foundations.html" class="btn btn-outline">Back to Event Details</a>
+            </div>
+
+            <p class="fine">
+                <strong>Payment deadline:</strong> within 24 hours of registering, and no later than 48 hours before your first session.<br>
+                <strong>Refunds:</strong> single session &mdash; full refund with 48 hours' notice before that session.
+                All three sessions &mdash; full refund with 48 hours' notice before the first session.<br>
+                Questions? Text <a href="sms:+18555963810">(855) 596-3810</a> or email
+                <a href="mailto:hudsonvalleypowerlifting@gmail.com">hudsonvalleypowerlifting@gmail.com</a>.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        © 2026 Hudson Valley Powerlifting. All rights reserved.
+    </footer>
+
+    <script>
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

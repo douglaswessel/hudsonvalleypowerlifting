@@ -94,15 +94,93 @@ Use the temporary URL (netlify.app or vercel.app) to verify everything works
 
 ```
 hvpl-site/
-├── index.html          # Home page
-├── members.html        # Memberships & pricing
-├── training.html       # Training & coaching
-├── equipment.html      # Equipment list
-├── contact.html        # Contact & location
+├── index.html               # Home page
+├── events.html              # Events listing (index of all events)
+├── event-sbd-foundations.html   # Event detail page + registration form
+├── events-registered.html   # Post-registration payment page (no-JS form fallback)
+├── members.html             # Memberships & pricing
+├── training.html            # Training & coaching
+├── equipment.html           # Equipment list
+├── team.html                # Coaches
+├── contact.html             # Contact & location
 ├── images/
-│   └── HVPL_Logo.png  # Logo
-└── README.md          # This file
+│   └── HVPL_Logo.png       # Logo
+└── README.md               # This file
 ```
+
+---
+
+## Events Pages
+
+Events are split in two:
+
+- **`events.html`** — the listing. One card per event, linked from the main nav. Cards show their own
+  registration status and drop off the "Upcoming" list automatically once the event has passed.
+- **`event-sbd-foundations.html`** — the detail page for the current series, including the
+  registration form and waiver. Each future event gets its own `event-*.html` page.
+
+### Adding a new event
+
+1. Copy `event-sbd-foundations.html` to `event-<slug>.html` and edit the copy: hero copy, session
+   cards, `SESSIONS` / `PRICES` in the script, the `Event` JSON-LD blocks in `<head>`, and the
+   `canonical` / `og:url` / breadcrumb URLs. Give the form a new `name=` and matching
+   `form-name` value so its submissions land in their own Netlify bucket.
+2. In `events.html`, copy the `<a class="event-card">` block, point its `href` at the new page, and
+   add a matching entry to `EVENT_STATUS` in the script at the bottom (`id`, `closes`, `lastStart`)
+   so its status tag and auto-expiry work.
+3. Add both to `sitemap.xml`.
+
+### Registration setup
+
+One thing needs doing outside the code:
+
+**1. Turn on Netlify Forms (one time)**
+The registration form posts to Netlify Forms under the name `sbd-foundations`.
+
+1. Netlify dashboard → Site configuration → **Forms** → enable form detection
+2. Redeploy the site (form detection only picks up forms on a fresh deploy)
+3. Forms → `sbd-foundations` → **Add notification** → email to `hudsonvalleypowerlifting@gmail.com`
+
+Until form detection is on, submissions fail — the page catches this and tells registrants to text
+the gym instead, so nobody is lost, but you'll want it enabled before promoting the page.
+
+### Payment (Venmo)
+
+Payments go to **https://venmo.com/u/Heather-Monkey**. After a successful registration the
+confirmation screen shows the exact amount owed, the account, and a **Pay $X with Venmo** button.
+The same details are on `events-registered.html` for anyone with JavaScript off.
+
+Config lives at the bottom of `event-sbd-foundations.html`:
+
+```js
+const VENMO_PROFILE_URL = 'https://venmo.com/u/Heather-Monkey';
+const VENMO_USERNAME = 'Heather-Monkey';
+const VENMO_PREFILL = true;
+```
+
+With `VENMO_PREFILL` on, the button uses Venmo's prefill URL —
+`https://venmo.com/?txn=pay&recipients=<user>&amount=<amt>&note=<note>` — which opens the payment
+screen with the amount and note already entered. Confirmed working on mobile with the Venmo app.
+Set it to `false` and the button falls back to `VENMO_PROFILE_URL`, which always resolves but fills
+nothing in.
+
+`events-registered.html` (the no-JS fallback) uses the plain profile link, since that page has no way
+to know which sessions were picked and therefore can't prefill an amount — it lists all three prices
+instead. Changing the account means updating the two constants here plus that hardcoded link.
+
+**Heads up on the confirmation email:** Netlify Forms notifies *you* when someone registers — it does
+not automatically reply to the registrant. So a confirmation email carrying the Venmo link has to be
+sent either by hand from the Netlify submission, or by wiring an automation (Netlify Function, Zapier,
+or Make) onto the form. Until that exists, the payment details on the confirmation screen are what
+registrants actually see, which is why they're spelled out there in full.
+
+**Updating the series later**
+Session dates, times, and labels live in the `SESSIONS` object in the script at the bottom of
+`event-sbd-foundations.html`, and prices in `PRICES` (`1: 50, 2: 100, 3: 125`). Each session's registration closes
+automatically 48 hours before its start time — closed sessions grey out on their own, and once all
+sessions have passed the form disables itself with a "text us about the next one" message.
+Session copy also appears in the card markup and the JSON-LD `Event` blocks in `<head>`, and the
+summary on the listing card in `events.html`.
 
 ---
 

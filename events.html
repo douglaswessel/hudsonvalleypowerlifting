@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Workshops - Hudson Valley Powerlifting</title>
+    <meta name="description" content="Workshops, seminars, and meets at Hudson Valley Powerlifting in Highland, NY. See what's coming up and register online.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="canonical" href="https://hvpowerlifting.com/events.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Events & Workshops - Hudson Valley Powerlifting">
+    <meta property="og:description" content="Workshops, seminars, and meets at Hudson Valley Powerlifting in Highland, NY. See what's coming up and register online.">
+    <meta property="og:url" content="https://hvpowerlifting.com/events.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://hvpowerlifting.com/images/HVPL%20Logo%20SEO.png">
+    <meta property="og:site_name" content="Hudson Valley Powerlifting">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Events & Workshops - Hudson Valley Powerlifting">
+    <meta name="twitter:description" content="Workshops, seminars, and meets at Hudson Valley Powerlifting in Highland, NY. See what's coming up and register online.">
+    <meta name="twitter:image" content="https://hvpowerlifting.com/images/HVPL%20Logo%20SEO.png">
+
+    <!-- Event listing schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Upcoming Events at Hudson Valley Powerlifting",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "url": "https://hvpowerlifting.com/event-sbd-foundations.html",
+                "name": "SBD Foundations: Squat, Bench & Deadlift"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://hvpowerlifting.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Events",
+                "item": "https://hvpowerlifting.com/events.html"
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+        }
+
+        section[id] {
+            scroll-margin-top: 130px;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, system-ui, sans-serif;
+            color: #ffffff;
+            background: #000000;
+            line-height: 1.6;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-secondary {
+            font-size: 48px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .logo-secondary .period {
+            color: #dc2626;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 26px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #dc2626;
+        }
+
+        .cta-nav {
+            background: #dc2626;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .cta-nav:hover {
+            background: #b91c1c;
+            color: #ffffff;
+        }
+
+        .shop-cart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s;
+            margin-left: 20px;
+        }
+
+        .shop-cart:hover {
+            background: #dc2626;
+            transform: translateY(-2px);
+        }
+
+        .shop-cart svg {
+            stroke: #ffffff;
+        }
+
+        .mobile-menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .mobile-menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: #ffffff;
+            transition: all 0.3s;
+            border-radius: 2px;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+
+        .mobile-menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+
+        .page-hero {
+            margin-top: 100px;
+            padding: 50px 40px 40px;
+            text-align: center;
+            background: linear-gradient(180deg, #0a0a0a 0%, #000000 100%);
+        }
+
+        .page-hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .page-hero p {
+            font-size: 20px;
+            color: #a3a3a3;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px 40px;
+        }
+
+        .list-heading {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 32px;
+        }
+
+        .list-heading h2 {
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            white-space: nowrap;
+        }
+
+        .list-heading .rule {
+            flex: 1;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.12);
+        }
+
+        .list-heading .count {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #737373;
+            white-space: nowrap;
+        }
+
+        /* Event row card */
+        .event-card {
+            display: grid;
+            grid-template-columns: 150px 1fr auto;
+            gap: 32px;
+            align-items: center;
+            background: #0a0a0a;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+            text-decoration: none;
+            color: #ffffff;
+            transition: all 0.3s;
+        }
+
+        .event-card:hover {
+            border-color: #dc2626;
+            transform: translateY(-4px);
+        }
+
+        .event-card.featured {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0000 100%);
+            border-color: rgba(220, 38, 38, 0.6);
+        }
+
+        .date-block {
+            text-align: center;
+            border: 1px solid rgba(220, 38, 38, 0.4);
+            border-radius: 10px;
+            padding: 16px 10px;
+            background: rgba(220, 38, 38, 0.07);
+        }
+
+        .date-block .month {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #dc2626;
+        }
+
+        .date-block .day {
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+
+        .date-block .through {
+            font-size: 12px;
+            color: #a3a3a3;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        .date-block.tbd .day {
+            font-size: 22px;
+            padding: 8px 0;
+        }
+
+        .event-body .tag-row {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        .tag {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.08);
+            color: #d4d4d4;
+        }
+
+        .tag.hot {
+            background: #dc2626;
+            color: #ffffff;
+        }
+
+        .tag.open {
+            background: rgba(34, 197, 94, 0.15);
+            color: #22c55e;
+            border: 1px solid rgba(34, 197, 94, 0.4);
+        }
+
+        .tag.closed {
+            background: rgba(255, 255, 255, 0.06);
+            color: #737373;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .event-body h3 {
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 10px;
+        }
+
+        .event-meta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        .event-meta span {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 14px;
+            color: #e5e5e5;
+            font-weight: 600;
+        }
+
+        .event-meta svg {
+            flex-shrink: 0;
+        }
+
+        .event-body p.blurb {
+            font-size: 15px;
+            color: #a3a3a3;
+            line-height: 1.7;
+        }
+
+        .event-action {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+        }
+
+        .event-price {
+            font-size: 26px;
+            font-weight: 800;
+            color: #dc2626;
+            letter-spacing: -1px;
+            white-space: nowrap;
+        }
+
+        .event-price small {
+            display: block;
+            font-size: 12px;
+            font-weight: 600;
+            color: #a3a3a3;
+            letter-spacing: 0;
+            text-transform: uppercase;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: #dc2626;
+            color: #ffffff;
+        }
+
+        .event-card:hover .btn-primary {
+            background: #b91c1c;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .event-card:hover .btn-secondary {
+            border-color: #dc2626;
+            color: #dc2626;
+        }
+
+        /* Non-clickable "on the horizon" card */
+        .event-card.horizon {
+            cursor: default;
+        }
+
+        .event-card.horizon:hover {
+            border-color: rgba(255, 255, 255, 0.1);
+            transform: none;
+        }
+
+        .empty-note {
+            background: #0a0a0a;
+            border: 1px dashed rgba(255, 255, 255, 0.18);
+            border-radius: 12px;
+            padding: 36px;
+            text-align: center;
+            color: #a3a3a3;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        .empty-note a {
+            color: #dc2626;
+            font-weight: 600;
+        }
+
+        /* Suggest band */
+        .suggest-band {
+            background: #0a0a0a;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 60px 40px;
+        }
+
+        .suggest-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .suggest-inner h2 {
+            font-size: 30px;
+            font-weight: 800;
+            margin-bottom: 14px;
+            letter-spacing: -1px;
+        }
+
+        .suggest-inner p {
+            font-size: 17px;
+            color: #a3a3a3;
+            margin-bottom: 26px;
+        }
+
+        .suggest-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        footer {
+            background: #0a0a0a;
+            padding: 50px 40px 35px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-icon:hover {
+            background: #dc2626;
+        }
+
+        .copyright {
+            width: 100%;
+            text-align: center;
+            padding-top: 35px;
+            margin-top: 35px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #737373;
+            font-size: 14px;
+        }
+
+        @media (max-width: 860px) {
+            .event-card {
+                grid-template-columns: 96px 1fr;
+                gap: 20px;
+                align-items: start;
+            }
+
+            .event-action {
+                grid-column: 1 / -1;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                border-top: 1px solid rgba(255, 255, 255, 0.08);
+                padding-top: 18px;
+            }
+
+            .date-block .day {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-hero {
+                padding: 40px 20px 30px;
+            }
+
+            .page-hero h1 {
+                font-size: 34px;
+            }
+
+            .page-hero p {
+                font-size: 17px;
+            }
+
+            .content-section,
+            .suggest-band {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .event-card {
+                padding: 22px;
+            }
+
+            .event-body h3 {
+                font-size: 21px;
+            }
+
+            .list-heading h2 {
+                font-size: 22px;
+            }
+
+            .list-heading .count {
+                display: none;
+            }
+
+            .event-action {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 14px;
+            }
+
+            .event-action .btn {
+                width: 100%;
+            }
+
+            .event-price {
+                text-align: center;
+            }
+
+            /* Date block goes horizontal so the copy gets the full width */
+            .event-card {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .date-block {
+                display: flex;
+                align-items: baseline;
+                gap: 8px;
+                justify-self: start;
+                padding: 8px 16px;
+            }
+
+            .date-block .day {
+                font-size: 22px;
+            }
+
+            .date-block .through {
+                margin-top: 0;
+            }
+
+            .event-action {
+                grid-column: auto;
+            }
+
+            .mobile-menu-toggle {
+                display: flex;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 100px;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.98);
+                flex-direction: column;
+                padding: 40px;
+                gap: 30px;
+                transform: translateX(-100%);
+                transition: transform 0.3s;
+                border-top: 1px solid rgba(255, 255, 255, 0.1);
+                z-index: 1000;
+                max-height: calc(100vh - 100px);
+                overflow-y: auto;
+            }
+
+            .nav-links.active {
+                transform: translateX(0);
+            }
+
+            .cta-nav {
+                display: block;
+                text-align: center;
+            }
+
+            nav > .shop-cart {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-secondary">HVPL<span class="period">.</span></a>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="members.html">Memberships & Passes</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="training.html">Training</a></li>
+                <li><a href="equipment.html">Equipment</a></li>
+                <li><a href="team.html">Team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="https://hvpowerlifting.printful.me/" target="_blank">Shop</a></li>
+                <li><a href="https://hvpl.gymmasteronline.com/portal/casual_form" class="cta-nav">Check Us Out</a></li>
+            </ul>
+            <a href="https://hvpowerlifting.printful.me/" target="_blank" class="shop-cart" aria-label="Shop">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"/>
+                    <circle cx="20" cy="21" r="1"/>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                </svg>
+            </a>
+        </nav>
+    </header>
+
+    <section class="page-hero">
+        <h1>Events &amp; Workshops</h1>
+        <p>Workshops, seminars, and meets at HVPL. Small groups, real coaching, open to members and non-members alike.</p>
+    </section>
+
+    <!-- ============================================================
+         UPCOMING EVENTS
+         To add an event: copy an <a class="event-card"> block below,
+         point href at its detail page, and add an entry to the
+         EVENT_STATUS list in the script at the bottom of this file so
+         its "registration open / closed" tag stays accurate on its own.
+         ============================================================ -->
+    <section class="content-section" id="upcoming">
+        <div class="list-heading">
+            <h2>Upcoming</h2>
+            <span class="rule"></span>
+            <span class="count" id="upcoming-count"></span>
+        </div>
+
+        <div id="upcoming-list">
+            <a href="event-sbd-foundations.html" class="event-card featured" data-event="sbd-foundations">
+                <div class="date-block">
+                    <div class="month">Aug</div>
+                    <div class="day">27</div>
+                    <div class="through">thru Sep 10</div>
+                </div>
+                <div class="event-body">
+                    <div class="tag-row">
+                        <span class="tag hot">Workshop Series</span>
+                        <span class="tag">3 Sessions</span>
+                        <span class="tag">All Levels &middot; 16+</span>
+                        <span class="tag open" data-status-tag="sbd-foundations">Registration Open</span>
+                    </div>
+                    <h3>SBD Foundations: Squat, Bench &amp; Deadlift</h3>
+                    <div class="event-meta">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            Thursdays &mdash; Aug 27, Sep 3, Sep 10
+                        </span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            6:30&ndash;7:30 PM
+                        </span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>
+                            10 lifters max
+                        </span>
+                    </div>
+                    <p class="blurb">
+                        One lift, one hour, one night a week. Gym and equipment safety, technique instruction, then
+                        hands-on lifting in small groups with individual feedback. Attend one session or all three &mdash;
+                        each one stands on its own, and no previous barbell experience is required.
+                    </p>
+                </div>
+                <div class="event-action">
+                    <div class="event-price">$50<small>per session &middot; $125 all three</small></div>
+                    <span class="btn btn-primary">View &amp; Register</span>
+                </div>
+            </a>
+        </div>
+
+        <div id="upcoming-empty" class="empty-note" style="display: none;">
+            Nothing on the calendar right now &mdash; but we run workshops and mock meets through the year.
+            <a href="contact.html">Tell us what you'd want to see</a> and we'll let you know when the next one is booked.
+        </div>
+    </section>
+
+    <section class="content-section" id="horizon" style="padding-top: 0;">
+        <div class="list-heading">
+            <h2>On the Horizon</h2>
+            <span class="rule"></span>
+            <span class="count">Dates to be announced</span>
+        </div>
+
+        <div class="event-card horizon">
+            <div class="date-block tbd">
+                <div class="month">Coming</div>
+                <div class="day">TBA</div>
+            </div>
+            <div class="event-body">
+                <div class="tag-row">
+                    <span class="tag">Workshop Series</span>
+                    <span class="tag">Advanced</span>
+                </div>
+                <h3>SBD Advanced: Technique &amp; Programming</h3>
+                <p class="blurb">
+                    A follow-on series for lifters past the basics &mdash; refining technique under heavier loads, cues that
+                    hold up near a max, and how to program the big three. Dates aren't set yet. Let us know you're
+                    interested and you'll hear first when we lock them in.
+                </p>
+            </div>
+            <div class="event-action">
+                <a href="contact.html" class="btn btn-secondary">I'm Interested</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="suggest-band">
+        <div class="suggest-inner">
+            <h2>Looking for something else?</h2>
+            <p>
+                We run workshops, seminars, and mock meets through the year. If there's a topic you want covered
+                &mdash; or you want one-on-one work instead of a group session &mdash; tell us.
+            </p>
+            <div class="suggest-actions">
+                <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+                <a href="training.html" class="btn btn-secondary">Training &amp; Coaching</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="logo-secondary">HVPL<span class="period">.</span></div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=61563850394669" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/hudsonvalleypowerlifting/" class="social-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="copyright">
+                © 2026 Hudson Valley Powerlifting. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /* ---------------- Mobile nav ---------------- */
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        /* =========================================================
+           EVENT STATUS
+           One entry per event card in the Upcoming list.
+             id        - matches data-event / data-status-tag on the card
+             lastStart - start time of the event's final session
+             closes    - registration cut-off (48h before the FIRST session)
+           Once lastStart has passed the card drops off the Upcoming list
+           on its own, so nothing goes stale if you forget to prune it.
+           ========================================================= */
+        const EVENT_STATUS = [
+            {
+                id: 'sbd-foundations',
+                closes: '2026-08-25T18:30:00-04:00',
+                lastStart: '2026-09-10T19:30:00-04:00'
+            }
+        ];
+
+        let liveCount = 0;
+
+        EVENT_STATUS.forEach(ev => {
+            const card = document.querySelector('[data-event="' + ev.id + '"]');
+            const tag = document.querySelector('[data-status-tag="' + ev.id + '"]');
+            if (!card) return;
+
+            const now = Date.now();
+            const over = now > new Date(ev.lastStart).getTime();
+            const closed = now > new Date(ev.closes).getTime();
+
+            if (over) {
+                card.style.display = 'none';
+                return;
+            }
+
+            liveCount++;
+
+            if (closed && tag) {
+                tag.textContent = 'Registration Closed';
+                tag.classList.remove('open');
+                tag.classList.add('closed');
+                const btn = card.querySelector('.event-action .btn');
+                if (btn) btn.textContent = 'View Details';
+            }
+        });
+
+        document.getElementById('upcoming-count').textContent =
+            liveCount === 1 ? '1 event' : liveCount + ' events';
+
+        if (liveCount === 0) {
+            document.getElementById('upcoming-list').style.display = 'none';
+            document.getElementById('upcoming-empty').style.display = 'block';
+            document.getElementById('upcoming-count').textContent = '';
+        }
+    </script>
+</body>
+</html>
