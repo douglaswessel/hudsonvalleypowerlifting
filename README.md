@@ -1,92 +1,37 @@
 # Hudson Valley Powerlifting Website
 
-## Deployment Instructions
+## Hosting & Deployment
 
-### Option 1: Netlify (Recommended - Easiest)
+The site is hosted on **Cloudflare Pages** (project `hvpowerlifting`, Cloudflare account
+hudsonvalleypowerlifting@gmail.com). It moved off Netlify in October 2026 after Netlify suspended
+the free site for exceeding usage.
 
-**Step 1: Create Netlify Account**
-1. Go to [netlify.com](https://netlify.com)
-2. Sign up (free)
+**Deploy:** run `./deploy.sh` (needs `npx wrangler login` as the gym account once). The script
+copies the site to a temp folder so `.git`, this README, and the script itself are never published.
+Don't run `wrangler pages deploy .` or `wrangler deploy` from the repo root.
 
-**Step 2: Deploy Site**
-1. Drag the entire `hvpl-site` folder onto Netlify's dashboard
-2. Site deploys instantly
-3. You'll get a URL like `random-name-12345.netlify.app`
+- Production: https://www.hvpowerlifting.com (also https://hvpowerlifting.pages.dev)
+- Pages serves clean URLs: `/members` serves `members.html`, and `/members.html` 308-redirects to
+  `/members`. Link to the clean form everywhere (nav, canonical tags, sitemap).
+- `404.html` is the not-found page. Without it Pages would serve the home page for every bad URL.
+- `_headers` sets security and image cache headers.
+- Keep every image under 25 MB (Pages' per-file limit). Resize photos to about 2000px on the long
+  edge before adding them: `sips -Z 2000 -s formatOptions 72 photo.jpg`.
 
-**Step 3: Connect Domain**
-1. In Netlify dashboard → Domain Settings
-2. Click "Add custom domain"
-3. Enter `hvpowerlifting.com`
-4. Follow DNS instructions (update nameservers at your registrar)
+### Domain & DNS
 
-**DNS Records to Add:**
-```
-Type: CNAME
-Name: www
-Value: [your-site].netlify.app
+`hvpowerlifting.com` is registered at **Wix**, and DNS stays at Wix (Wix doesn't allow nameserver
+changes). Records:
 
-Type: A (for root domain)
-Value: (Netlify provides this)
-```
+| Host | Type | Value | Purpose |
+|---|---|---|---|
+| `www` | CNAME | `hvpowerlifting.pages.dev` | The site (canonical host) |
+| `@` | A | `167.172.5.31` | ForwardDomain.net, redirects the bare domain to www |
+| `fwd` | TXT | `http-status=301;forward-domain=https://www.hvpowerlifting.com/*` | ForwardDomain target |
 
----
-
-### Option 2: Vercel (Also Free)
-
-**Step 1: Create Vercel Account**
-1. Go to [vercel.com](https://vercel.com)
-2. Sign up
-
-**Step 2: Deploy**
-1. Click "Add New Project"
-2. Drag folder or connect GitHub
-3. Deploy
-
-**Step 3: Connect Domain**
-Same as Netlify - update nameservers in Vercel dashboard
-
----
-
-### Option 3: GitHub Pages (Free, Requires GitHub)
-
-**Step 1: Create GitHub Repository**
-1. Go to [github.com](https://github.com)
-2. Create new repository named `hvpl-website`
-3. Upload all files from `hvpl-site` folder
-
-**Step 2: Enable GitHub Pages**
-1. Repository Settings → Pages
-2. Source: Deploy from branch `main`
-3. Save
-
-**Step 3: Connect Domain**
-1. Add `CNAME` file with `hvpowerlifting.com` inside
-2. Update DNS at registrar:
-```
-Type: CNAME
-Name: www
-Value: [username].github.io
-
-Type: A (for root)
-Value: 185.199.108.153
-```
-
----
-
-## DNS Migration from Wix
-
-**Where to Update DNS:**
-Find where you bought `hvpowerlifting.com` (likely GoDaddy, Namecheap, etc.)
-
-**Migration Steps:**
-1. Deploy new site first (test with temp URL)
-2. Update DNS records at registrar
-3. Wait 24-48 hours for propagation
-4. Keep Wix site live during transition
-5. Cancel Wix after new site is live
-
-**Testing Before DNS Switch:**
-Use the temporary URL (netlify.app or vercel.app) to verify everything works
+The domain has no MX or TXT email records; the gym uses Gmail. A later option is transferring the
+domain to Cloudflare Registrar, which lets Pages serve the bare domain directly and drops the
+ForwardDomain dependency.
 
 ---
 
@@ -131,6 +76,10 @@ Events are split in two:
 3. Add both to `sitemap.xml`.
 
 ### Registration setup
+
+> **Out of date since the Cloudflare move:** Netlify Forms doesn't exist on Cloudflare Pages. The form
+> must be switched to a new form backend before `REGISTRATION_OPEN` is set to `true`. The Netlify steps
+> below no longer apply.
 
 One thing needs doing outside the code:
 
