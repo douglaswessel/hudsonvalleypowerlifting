@@ -8,7 +8,7 @@ DIST=$(mktemp -d)
 trap 'rm -rf "$DIST"' EXIT
 
 rsync -a --exclude .git --exclude .gitignore --exclude .DS_Store \
-  --exclude README.md --exclude deploy.sh --exclude .wrangler --exclude registration ./ "$DIST/"
+  --exclude README.md --exclude deploy.sh --exclude .wrangler --exclude registration --exclude docs ./ "$DIST/"
 
 cd "$DIST"
 npx wrangler pages deploy . --project-name hvpowerlifting --branch main --commit-dirty=true
