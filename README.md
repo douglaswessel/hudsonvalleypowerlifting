@@ -28,8 +28,10 @@ changes). Records:
 | `www` | CNAME | `hvpowerlifting.pages.dev` | The site (canonical host) |
 | `@` | A | `167.172.5.31` | ForwardDomain.net, redirects the bare domain to www |
 | `fwd` | TXT | `http-status=301;forward-domain=https://www.hvpowerlifting.com/*` | ForwardDomain target |
+| `@` | TXT | `google-site-verification=q8ZhfB-…` | Google Search Console **Domain** property. Don't delete it |
 
-The domain has no MX or TXT email records; the gym uses Gmail. A later option is transferring the
+The domain has no MX or email TXT records; the gym uses Gmail. Search Console uses the Domain property
+(`hvpowerlifting.com`), with the sitemap submitted as `https://www.hvpowerlifting.com/sitemap.xml`. A later option is transferring the
 domain to Cloudflare Registrar, which lets Pages serve the bare domain directly and drops the
 ForwardDomain dependency.
 
