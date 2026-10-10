@@ -69,7 +69,8 @@ Events are split in two:
 1. Copy `event-sbd-foundations.html` to `event-<slug>.html` and edit the copy: hero copy, session
    cards, `SESSIONS` / `PRICES` in the script, the `Event` JSON-LD blocks in `<head>`, and the
    `canonical` / `og:url` / breadcrumb URLs. Give the form a new `name=` and matching
-   `form-name` value so its submissions land in their own Netlify bucket.
+   `form-name` value so its submissions land in their own sheet tab (and add the event to `EVENTS` in
+   `registration/Code.gs`).
 2. In `events.html`, copy the `<a class="event-card">` block, point its `href` at the new page, and
    add a matching entry to `EVENT_STATUS` in the script at the bottom (`id`, `closes`, `lastStart`)
    so its status tag and auto-expiry work.
@@ -77,21 +78,12 @@ Events are split in two:
 
 ### Registration setup
 
-> **Out of date since the Cloudflare move:** Netlify Forms doesn't exist on Cloudflare Pages. The form
-> must be switched to a new form backend before `REGISTRATION_OPEN` is set to `true`. The Netlify steps
-> below no longer apply.
+Registrations go to a Google Sheet through a Google Apps Script web app, which also emails the gym
+and sends each registrant a confirmation with their Venmo payment link. Setup, redeploy steps and
+limits are in [`registration/README.md`](registration/README.md).
 
-One thing needs doing outside the code:
-
-**1. Turn on Netlify Forms (one time)**
-The registration form posts to Netlify Forms under the name `sbd-foundations`.
-
-1. Netlify dashboard → Site configuration → **Forms** → enable form detection
-2. Redeploy the site (form detection only picks up forms on a fresh deploy)
-3. Forms → `sbd-foundations` → **Add notification** → email to `hudsonvalleypowerlifting@gmail.com`
-
-Until form detection is on, submissions fail — the page catches this and tells registrants to text
-the gym instead, so nobody is lost, but you'll want it enabled before promoting the page.
+To open sign-ups for an event: make sure `REGISTRATION_ENDPOINT` is set at the bottom of the event
+page, then set `REGISTRATION_OPEN = true` and deploy.
 
 ### Payment (Venmo)
 
@@ -117,8 +109,9 @@ nothing in.
 to know which sessions were picked and therefore can't prefill an amount — it lists all three prices
 instead. Changing the account means updating the two constants here plus that hardcoded link.
 
-**Heads up on the confirmation email:** Netlify Forms notifies *you* when someone registers — it does
-not automatically reply to the registrant. So a confirmation email carrying the Venmo link has to be
+**Confirmation email:** the Apps Script emails each registrant their amount and a Venmo button
+(see `registration/README.md`). Older note, kept for context: Netlify Forms only notified the gym
+and did not reply to the registrant. So a confirmation email carrying the Venmo link has to be
 sent either by hand from the Netlify submission, or by wiring an automation (Netlify Function, Zapier,
 or Make) onto the form. Until that exists, the payment details on the confirmation screen are what
 registrants actually see, which is why they're spelled out there in full.

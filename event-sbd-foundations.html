@@ -1566,7 +1566,7 @@
 
             <div id="form-error" class="form-error hidden"></div>
 
-            <form id="reg-form" class="hidden" name="sbd-foundations" method="POST" action="/events-registered" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+            <form id="reg-form" class="hidden" name="sbd-foundations" method="POST" action="/events-registered" novalidate>
                 <input type="hidden" name="form-name" value="sbd-foundations">
                 <input type="hidden" name="event" value="SBD Foundations: Squat, Bench &amp; Deadlift (Mar 4 / Mar 11 / Mar 18, 2027)">
                 <input type="hidden" name="sessions-summary" id="sessions-summary" value="">
@@ -1772,7 +1772,7 @@
             <!-- Shown after a successful submit -->
             <div id="confirm-panel" class="confirm-panel hidden">
                 <h2>You're on the list &mdash; one step left</h2>
-                <p class="lede">Send payment to lock your spot. We'll confirm by text and email once it lands.</p>
+                <p class="lede">Send payment to lock your spot. We've emailed you these payment details too, and we'll confirm by text or email once your payment lands.</p>
 
                 <div class="confirm-summary">
                     <div class="row"><span class="k">Name</span><span class="v" id="c-name"></span></div>
@@ -1888,6 +1888,11 @@
         /* Flip to true to open sign-ups: shows the form, restores the
            "Register Now" buttons, and marks sessions open. */
         const REGISTRATION_OPEN = false;
+
+        /* Google Apps Script web app that records registrations in the
+           "HVPL Event Registrations" sheet and sends the confirmation email.
+           See registration/README.md. Must be set before opening sign-ups. */
+        const REGISTRATION_ENDPOINT = '';
 
         const CLOSE_LEAD_MS = 48 * 60 * 60 * 1000;
         const PRICES = { 1: 50, 2: 100, 3: 125 };
@@ -2141,14 +2146,18 @@
             submitBtn.textContent = 'Submitting…';
 
             try {
-                const body = new URLSearchParams(new FormData(form)).toString();
-                const res = await fetch('/', {
+                if (!REGISTRATION_ENDPOINT) throw new Error('REGISTRATION_ENDPOINT is not set');
+
+                // URLSearchParams body = a "simple" CORS request, so no preflight;
+                // Apps Script answers with a JSON body the page can read.
+                const res = await fetch(REGISTRATION_ENDPOINT, {
                     method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: body
+                    body: new URLSearchParams(new FormData(form))
                 });
 
                 if (!res.ok) throw new Error('Submission failed with status ' + res.status);
+                const result = await res.json();
+                if (!result.ok) throw new Error('Submission rejected: ' + (result.error || 'unknown'));
                 showConfirmation();
             } catch (err) {
                 submitBtn.disabled = false;
