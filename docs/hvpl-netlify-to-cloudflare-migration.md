@@ -210,7 +210,7 @@ Each session closes automatically 48 hours before it starts.
 | Pages project `hvpowerlifting` created on the gym's Cloudflare account; deployed to `hvpowerlifting.pages.dev` | All pages 200; `.html` → 308; unknown → 404; `.git`/README not served |
 | `www.hvpowerlifting.com` added as a custom domain | Certificate issued (Let's Encrypt) |
 | Wix: `www` CNAME → `hvpowerlifting.pages.dev` | **Site back online** |
-| Wix: apex A → `167.172.5.31` plus the `fwd` TXT record (ForwardDomain) | Bare domain redirects to `www`. Initially 302; TXT updated to `http-status=301`, applies once the cache expires |
+| Wix: apex A → `167.172.5.31` plus the `fwd` TXT record (ForwardDomain) | Bare domain redirects to `www`. Initially 302; TXT updated to `http-status=301`; confirmed 301 on Oct 12 |
 | Registration → Apps Script + Sheet | Tested end to end on a preview deployment, then merged. Registration still **closed** (`REGISTRATION_OPEN = false`) |
 | Search Console Domain property (TXT) verified; sitemap submitted | Done |
 | Google Business Profile website → `https://www.hvpowerlifting.com/` | Done |
@@ -222,9 +222,9 @@ Each session closes automatically 48 hours before it starts.
 
 | # | Item | Owner | When |
 |---|---|---|---|
-| 1 | Confirm the bare domain returns **301** (not 302) once ForwardDomain's cache expires: `curl -sI https://hvpowerlifting.com` | D | Oct 11 |
+| 1 | ~~Confirm the bare domain returns **301** once ForwardDomain's cache expires~~ ✅ Confirmed 301 on Oct 12 | D | Done |
 | 2 | Update the Facebook and Instagram bio links to `https://www.hvpowerlifting.com/` | B/D | Now |
-| 3 | Watch Search Console → Pages/Indexing. Old `.html` and apex URLs showing as "Page with redirect" is expected | D | Through ~Nov 7 |
+| 3 | Watch Search Console → Pages/Indexing, using the **Domain** property. Old `.html` and apex URLs showing as "Page with redirect" is expected. The Oct 12 export of the `www` URL-prefix property (5 not indexed: 2× 404, 2× redirect, 1× duplicate canonical) was pre-migration data through Oct 8. Identify the two 404 URLs and add redirects if they're still linked anywhere. Click **Validate fix** about a week after the recrawl | D | Through ~Nov 7 |
 | 4 | Delete the Netlify site (and remove its custom domain); cancel any Netlify plan/payment method; disconnect Netlify from the GitHub repo | D | ~Oct 24 |
 | 5 | Confirm Wix domain **auto-renew is ON**, the card on file is valid, and both owners can log into Wix. Set a reminder 60 days before expiry | B | Soon |
 | 6 | Give Brandon access to the Cloudflare account (Members → invite), or store the gym-Gmail login in a shared password manager | D | Soon |
