@@ -21,7 +21,7 @@ const GYM_SMS = 'sms:+18555963810';
 const EVENTS = {
   'sbd-foundations': {
     title: 'SBD Foundations: Squat, Bench & Deadlift',
-    prices: { 1: 50, 2: 100, 3: 125 },
+    prices: { 1: 100, 2: 200, 3: 225 },
     venmoUsername: 'Heather-Monkey',
     venmoNote: 'SBD Foundations'
   }

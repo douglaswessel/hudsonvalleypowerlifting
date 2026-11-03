@@ -120,7 +120,7 @@ registrants actually see, which is why they're spelled out there in full.
 
 **Updating the series later**
 Session dates, times, and labels live in the `SESSIONS` object in the script at the bottom of
-`event-sbd-foundations.html`, and prices in `PRICES` (`1: 50, 2: 100, 3: 125`). Each session's registration closes
+`event-sbd-foundations.html`, and prices in `PRICES` (`1: 100, 2: 200, 3: 225`). Each session's registration closes
 automatically 48 hours before its start time — closed sessions grey out on their own, and once all
 sessions have passed the form disables itself with a "text us about the next one" message.
 Session copy also appears in the card markup and the JSON-LD `Event` blocks in `<head>`, and the
