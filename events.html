@@ -747,25 +747,36 @@
         </div>
 
         <div id="upcoming-list">
-            <div class="event-card horizon" data-event="sbd-advanced">
-                <div class="date-block tbd">
+            <div class="event-card horizon" data-event="game-day">
+                <div class="date-block">
                     <div class="month">Feb</div>
-                    <div class="day">TBA</div>
+                    <div class="day">20</div>
                 </div>
                 <div class="event-body">
                     <div class="tag-row">
-                        <span class="tag hot">Workshop Series</span>
-                        <span class="tag">Advanced</span>
-                        <span class="tag soon">Dates TBA</span>
+                        <span class="tag hot">Seminar</span>
+                        <span class="tag">Meet Prep</span>
+                        <span class="tag soon">Registration Opens Soon</span>
                     </div>
-                    <h3>SBD Advanced: Technique &amp; Programming</h3>
+                    <h3>Game Day: Powerlifting Meet Seminar</h3>
+                    <div class="event-meta">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            Saturday, Feb 20, 2027
+                        </span>
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            10:00 AM&ndash;1:00 PM
+                        </span>
+                    </div>
                     <p class="blurb">
-                        A follow-on series for lifters past the basics &mdash; refining technique under heavier loads, cues that
-                        hold up near a max, and how to program the big three. Tentatively planned for February; dates aren't
-                        locked yet. Let us know you're interested and you'll hear first when we set them.
+                        Everything that happens on meet day, with coaches Heather and Josh &mdash; from weigh-ins and warm-ups
+                        to picking your attempts and hitting the commands. For anyone thinking about their first meet or
+                        wanting to run the next one smoother. Let us know you're interested and you'll hear first when sign-ups open.
                     </p>
                 </div>
                 <div class="event-action">
+                    <div class="event-price">$50</div>
                     <a href="/contact" class="btn btn-secondary">I'm Interested</a>
                 </div>
             </div>
@@ -807,6 +818,34 @@
                     <span class="btn btn-primary">View Details</span>
                 </div>
             </a>
+
+            <div class="event-card horizon" data-event="pride-fundraiser">
+                <div class="date-block">
+                    <div class="month">Jun</div>
+                    <div class="day">12</div>
+                </div>
+                <div class="event-body">
+                    <div class="tag-row">
+                        <span class="tag hot">Fundraiser</span>
+                        <span class="tag">Pride Month</span>
+                        <span class="tag soon">Details Coming Soon</span>
+                    </div>
+                    <h3>HVPL Pride Fundraiser</h3>
+                    <div class="event-meta">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#dc2626" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            Saturday, Jun 12, 2027
+                        </span>
+                    </div>
+                    <p class="blurb">
+                        Save the date for our Pride Month fundraiser at HVPL. Times and details are on the way &mdash;
+                        get in touch and we'll let you know as soon as they're set.
+                    </p>
+                </div>
+                <div class="event-action">
+                    <a href="/contact" class="btn btn-secondary">Keep Me Posted</a>
+                </div>
+            </div>
         </div>
 
         <div id="upcoming-empty" class="empty-note" style="display: none;">
@@ -880,13 +919,14 @@
            on its own, so nothing goes stale if you forget to prune it.
            ========================================================= */
         const EVENT_STATUS = [
-            // Dates not set yet: no closes/lastStart, so it always shows.
-            { id: 'sbd-advanced' },
+            // No on-site registration yet: no closes, just drop off after the day.
+            { id: 'game-day', lastStart: '2027-02-20T13:00:00-05:00' },
             {
                 id: 'sbd-foundations',
                 closes: '2027-03-02T18:00:00-05:00',
                 lastStart: '2027-03-18T20:00:00-04:00'
-            }
+            },
+            { id: 'pride-fundraiser', lastStart: '2027-06-12T23:59:00-04:00' }
         ];
 
         let liveCount = 0;
